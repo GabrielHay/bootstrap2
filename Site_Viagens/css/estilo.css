@@ -1,0 +1,45 @@
+/**cabecalho**/
+
+.logo{
+
+    width: 150px;
+    height: auto;
+}
+
+.imagem_banner{
+
+    width: 600px;
+    height: auto;
+}
+
+p{
+    text-align: justify;  
+}
+
+.img-destaque{
+
+    width: 230px;
+    height: auto;
+}
+
+.galeria{
+
+    width: 230px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.galeria p{
+
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.img-novidades{
+
+    width: 400px;
+    height: auto;
+}
