@@ -43,3 +43,25 @@ p{
     width: 400px;
     height: auto;
 }
+
+/*icones footer*/
+
+.facebook{
+
+    color: #3b5998;
+}
+
+.whatsapp{
+
+    color: #34af23;
+}
+
+.instagram{
+
+    color: #cd486b;
+}
+
+.youtube{
+
+        color: #bb0000;
+}
