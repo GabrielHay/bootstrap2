@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -20,7 +19,7 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-danger fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
@@ -32,10 +31,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto me-5">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Jogos</a>
+                <a class="nav-link active" aria-current="page" href="#">Jogos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="hardware.html">Hardware</a>
+                <a class="nav-link" href="#">Hardware</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Celulares</a>
@@ -48,7 +47,6 @@
               </li>
             </ul>
 
-              <a class="nav-link" href="cadastrar.html">Cadastre-se</a>
               <button class="btn btn-info me-5" type="submit">Login</button>
           
           </div>
@@ -56,183 +54,237 @@
       </nav>
     </header>
 
-    <div class="container-fluid">
-	
-        <div class="row bg-light mt-3">
-		
-            <div class="col-3 align-self-center">
-              <div class="dropdown">
-                <button type="button" class="btn btn-danger dropdown-toggle align-self-center" database-bs-toggle="dropdown">Produtinho</button>
-              </div>
-            </div>
-			<div class="col-3">
-			  <div class="dropdown">
-          <button type="button" class="btn btn-danger dropdown-toggle" database-bs-toggle="dropdown">Produtinho</button>
-        </div>
-			</div>
-			<div class="col-3">
-			  <div class="dropdown">
-          <button type="button" class="btn btn-danger dropdown-toggle" database-bs-toggle="dropdown">Produtinho</button>
-        </div>
-			</div>
-			<div class="col-3">
-			  <div class="dropdown">
-          <button type="button" class="btn btn-danger dropdown-toggle" database-bs-toggle="dropdown">Produtinho</button>
-        </div>
-			</div>
+ <div id="demo" class="carousel mt-3" data-bs-ride="carousel">
 
-      <!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-  
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner bg-danger">
-    <div class="carousel-item active">
-      <a href="imagem/th.jpg"><img src="imagem/th.jpg" alt="th" class="d-block mx-auto" style="width:300px"></a>
-    </div>
-    <div class="carousel-item">
-      <a href="imagem/th.jpg"><img src="imagem/th.jpg" alt="th" class="d-block mx-auto" style="width:300px"></a>
-    </div>
-    <div class="carousel-item">
-      <a href="imagem/th.jpg"><img src="imagem/th.jpg" alt="th" class="d-block mx-auto" style="width:300px"></a>
-    </div>
-  </div>
-  
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+	 <div class="carousel-indicators">
+		<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+		<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+		<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+	 </div>
+
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+		  <img src="imagem/th.jpg" alt="Kobayashi" class="d-block mx-auto" style="width="150px" height="300px">
+		</div>
+		<div class="carousel-item slide">
+		  <img src="imagem/th.jpg" alt="Kobayashi" class="d-block mx-auto" style="width="150px" height="300px">
+		</div>
+		<div class="carousel-item">
+		  <img src="imagem/th.jpg" alt="Kobayashi" class="d-block mx-auto" style="width="150px" height="300px">
+		</div>
+	  </div>
+	  
+	  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
     <span class="carousel-control-next-icon"></span>
   </button>
+  
 </div>
 
-      </div>
 
+	<div class="container-md text-center mt-3">
+	
+        <div class="row">
+		
+            <div class="col-sm">
+                <button><p class="my-0">Produto</p></button>
+            </div>
+			
 		</div>
-        <div class="row bg-light mt-3">
-            <div class="col-sm-3">
+	</div>
+	
+	<div class="container-md">
+	
+        <div class="row">
+
+            <div class="col-sm-3 py-3">
                 <div class="card" style="width:800px height:400px">
                     <img class="card-img-top" src="imagem/th.jpg" alt="produto">
-                    <div class="card-body bg-danger">
-                    <h4 class="card-title">Nvidia</h4>
-                    <p class="card-text">descrição</p>
-                    <p class="card-text">R$ 3.000,00</p>
-                    <a href="https://www.mercadolivre.com">
-                      <button>comprar</button></a>
-					            <button>Carrinho</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card" style="width:800px height:200px">
-                    <a href="imagem/th.jpg"> <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto"> </a>
-                    <div class="card-body bg-danger">
+                    <div class="card-body">
                     <h4 class="card-title">Nvidia</h4>
                     <p class="card-text">descrição</p>
                     <p class="card-text">R$ 3.000,00</p>
                     <button>comprar</button>
-					<button>Carrinho</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-sm-3">
+	
+            <div class="col-sm-3 py-3">
                 <div class="card" style="width:800px height:400px">
-                    <a href="imagem/th.jpg"> <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto"> </a>
-                    <div class="card-body bg-danger">
+                    <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
                     <h4 class="card-title">Nvidia</h4>
                     <p class="card-text">descrição</p>
                     <p class="card-text">R$ 3.000,00</p>
                     <button>comprar</button>
-					          <button>Carrinho</button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-3">
+            <div class="col-sm-3 py-3">
                 <div class="card" style="width:800px height:400px">
-                    <a href="imagem/th.jpg"> <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto"> </a>
-                    <div class="card-body bg-danger">
+                    <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
                     <h4 class="card-title">Nvidia</h4>
                     <p class="card-text">descrição</p>
                     <p class="card-text">R$ 3.000,00</p>
                     <button>comprar</button>
-					          <button>Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 py-3">
+                <div class="card" style="width:800px height:400px">
+                    <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
+                    <h4 class="card-title">Nvidia</h4>
+                    <p class="card-text">descrição</p>
+                    <p class="card-text">R$ 3.000,00</p>
+                    <button>comprar</button>
                     </div>
                 </div>
             </div>
                
         </div>
 		
-		
-        <div class="row bg-light mt-3">
-
-            <div class="col-sm-3">
-                <div class="card" style="width:800px height:400px">
-                    <a href="imagem/th.jpg"> <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto"> </a>
-                    <div class="card-body bg-danger">
-                    <h4 class="card-title">Nvidia</h4>
-                    <p class="card-text">descrição</p>
-                    <p class="card-text">R$ 3.000,00</p>
-                    <button>comprar</button>
-					          <button>Carrinho</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card" style="width:800px height:400px">
-                    <a href="imagem/th.jpg"> <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto"> </a>
-                    <div class="card-body bg-danger">
-                    <h4 class="card-title">Nvidia</h4>
-                    <p class="card-text">descrição</p>
-                    <p class="card-text">R$ 3.000,00</p>
-                    <button>comprar</button>
-					          <button>Carrinho</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card" style="width:800px height:400px">
-                    <a href="imagem/th.jpg"> <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto"> </a>
-                    <div class="card-body bg-danger">
-                    <h4 class="card-title">Nvidia</h4>
-                    <p class="card-text">descrição</p>
-                    <p class="card-text">R$ 3.000,00</p>
-                    <button>comprar</button>
-					<button>Carrinho</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card" style="width:800px height:400px">
-                    <a href="imagem/th.jpg"> <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto"> </a>
-                    <div class="card-body bg-danger">
-                    <h4 class="card-title">Nvidia</h4>
-                    <p class="card-text">descrição</p>
-                    <p class="card-text">R$ 3.000,00</p>
-                    <button>comprar</button>
-					<button>Carrinho</button>
-                    </div>
-                </div>
-            </div>
-               
-        </div>
     </div>
 
+	<div class="container-md text-center mt-3">
+	
+        <div class="row">
+		
+            <div class="col-sm">
+                <button><p class="my-0">Produto</p></button>
+            </div>
+			
+		</div>
+	</div>
 
+    <div class="container-md">
+	
+        <div class="row">
 
+            <div class="col-sm-3 py-3">
+                <div class="card" style="width:800px height:400px">
+                    <img class="card-img-top" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
+                    <h4 class="card-title">Nvidia</h4>
+                    <p class="card-text">descrição</p>
+                    <p class="card-text">R$ 3.000,00</p>
+                    <button>comprar</button>
+                    </div>
+                </div>
+            </div>
+	
+            <div class="col-sm-3 py-3">
+                <div class="card" style="width:800px height:400px">
+                    <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
+                    <h4 class="card-title">Nvidia</h4>
+                    <p class="card-text">descrição</p>
+                    <p class="card-text">R$ 3.000,00</p>
+                    <button>comprar</button>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-sm-3 py-3">
+                <div class="card" style="width:800px height:400px">
+                    <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
+                    <h4 class="card-title">Nvidia</h4>
+                    <p class="card-text">descrição</p>
+                    <p class="card-text">R$ 3.000,00</p>
+                    <button>comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 py-3">
+                <div class="card" style="width:800px height:400px">
+                    <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
+                    <h4 class="card-title">Nvidia</h4>
+                    <p class="card-text">descrição</p>
+                    <p class="card-text">R$ 3.000,00</p>
+                    <button>comprar</button>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+		
+    </div>
+
+	<div class="container-md text-center mt-3">
+	
+        <div class="row">
+		
+            <div class="col-sm">
+                <button><p class="my-0">Produto</p></button>
+            </div>
+			
+		</div>
+	</div>
+
+    <div class="container-md">
+	
+        <div class="row">
+
+            <div class="col-sm-3 py-3">
+                <div class="card" style="width:800px height:400px">
+                    <img class="card-img-top" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
+                    <h4 class="card-title">Nvidia</h4>
+                    <p class="card-text">descrição</p>
+                    <p class="card-text">R$ 3.000,00</p>
+                    <button>comprar</button>
+                    </div>
+                </div>
+            </div>
+	
+            <div class="col-sm-3 py-3">
+                <div class="card" style="width:800px height:400px">
+                    <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
+                    <h4 class="card-title">Nvidia</h4>
+                    <p class="card-text">descrição</p>
+                    <p class="card-text">R$ 3.000,00</p>
+                    <button>comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 py-3">
+                <div class="card" style="width:800px height:400px">
+                    <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
+                    <h4 class="card-title">Nvidia</h4>
+                    <p class="card-text">descrição</p>
+                    <p class="card-text">R$ 3.000,00</p>
+                    <button>comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 py-3">
+                <div class="card" style="width:800px height:400px">
+                    <img class="card-img-top img-fluid" src="imagem/th.jpg" alt="produto">
+                    <div class="card-body">
+                    <h4 class="card-title">Nvidia</h4>
+                    <p class="card-text">descrição</p>
+                    <p class="card-text">R$ 3.000,00</p>
+                    <button>comprar</button>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+		
+    </div>
 
 
 
@@ -243,9 +295,9 @@
 
             <div class="container-fluid">
       
-              <div class="row mt-5 bg-danger">
+              <div class="row">
       
-                <div class="col-md-4 text-center align-self-center bg-danger"> 
+                <div class="col-md-4 text-center align-self-center bg-body"> 
                   <a href="">
                     <img class="logo" src="imagem/senai-logo.png" alt="">
                   </a>    
@@ -303,13 +355,7 @@
           </footer>
       
       
-      
-      
-      
-      
-      
-      
-      
+
       
       
           <!-- Optional JavaScript; choose one of the two! -->
