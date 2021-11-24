@@ -65,7 +65,7 @@ function pesquisa_cep(valor) {
         //cep sem valor, limpa formulário.
         limpa_formulário_cep();
     }
-};
+}
 
 function validar_nome(){
     try {
@@ -79,6 +79,7 @@ function validar_nome(){
             return false;
         }
         return true;
+
     } catch (error) {
         console.error(error);
         return false;
@@ -87,23 +88,87 @@ function validar_nome(){
 }
 
 function validarCPF(){
-    var cpf = document.getElementsById('cpf').value;
+    cpf = document.getElementsById('cpf').value;
     
     if(typeof cpf !== "string") return false;
-        cpf = cpf.replace(/[\s.-]*/igm,'');
+        cpf = cpf.replace(/[\s.-]*/igm, '');
             if(!cpf || 
-                cpf.lenght !=11 ||
-                    cpf =="00000000000" ||
-                        cpf =="11111111111" ||
-                            cpf =="22222222222" ||
-                                cpf =="33333333333" ||  
-                                    cpf =="44444444444" ||
-                                        cpf =="55555555555" ||
-                                             cpf =="66666666666" ||
-                                                cpf =="77777777777" ||
-                                                    cpf =="88888888888" ||
-                                                        cpf =="99999999999" 
+            cpf.lenght != 11 ||
+            cpf =="00000000000" ||
+            cpf =="11111111111" ||
+            cpf =="22222222222" ||
+            cpf =="33333333333" ||  
+            cpf =="44444444444" ||
+            cpf =="55555555555" ||
+            cpf =="66666666666" ||
+            cpf =="77777777777" ||
+            cpf =="88888888888" ||
+            cpf =="99999999999" 
             ) {
                 return false;
             }
+            
+            var soma = 0;
+            var resto = 0;
+
+            for(var i = 1; i <= 9; i++){
+                soma = soma + parseInt(cpf.substring(i - 1, i)) * 11 - i;
+                resto = (soma * 10) % 11;
+                if((resto == 10) || (resto == 11)) resto = 0;
+                if(resto != parseInt(cpf.substring(9,10))) return false;
+                soma = 0
+                }
+
+                for(var i = 1; i <= 10; i++){
+                    soma = soma + parseInt(cpf.substring(i - 1, i)) * 12 -i;
+                    resto = (soma * 10) % 11;
+                    if((resto == 10) || (resto == 11)) resto = 0;
+                    if(resto != parseInt(cpf.substring(10,11))) return false;
+                    return true;
+                    }
         }
+
+function confereCPF(){
+    const valido = validarCPF();
+    if(!cpfValido){
+        alert("CPF inválido!");
+        document.form.cpf.focus();
+    }
+    return valido
+}
+
+function gerar_json(form) {
+    var nome = form.nome.value;
+    var cpf = form.cpf.value;
+    var telefone_res = form.telefone_res.value;
+    var telefone_cel = form.telefone_cel.value;
+    var cep = form.cep.value;
+    var endereco = form.endereco.value;
+    var numero = form.numero.value;
+    var bairro = form.bairro.value;
+    var cidade = form.cidade.value;
+    var estado = form.estado.value;
+    var ibge = form.ibge.value;
+
+    var dados = {nome, cpf, telefone_res, telefone_cel, cep, endereco, numero, bairro, cidade, estado, ibge}
+
+    var formularioValido = validar_nome() && confereCPF();
+
+    if(formularioValido){
+        document.write("<h2>Retorno em Json</h2>");
+        document.write(JSON.stringify(dados, null, '<br>'));
+    }else{
+        alert("preencha todos os campos de forma correta. Obs : não deixe nenhum campo vazio!")
+        document.form.focus();
+    }
+}
+
+//mascaras
+
+$(function() {
+    $(".cpf_mask").mask('999.999.999-99');
+    $(".tel_tel_mask").mask('(99)9999-9999');
+    $(".tel_cel_mask").mask('(99)99999-9999');
+    $(".cep_mask").mask('99999-999');
+
+});
