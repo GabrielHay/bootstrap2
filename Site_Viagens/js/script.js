@@ -69,7 +69,7 @@ function pesquisa_cep(valor) {
 
 function validar_nome(){
     try {
-        let nome = document.getElementsById("nome").value;
+        let nome = document.getElementById("nome").value;
         let re = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/;
 
         if(!re.test(nome)){
@@ -88,9 +88,11 @@ function validar_nome(){
 }
 
 function validarCPF(){
-    cpf = document.getElementsById('cpf').value;
+    cpf = document.getElementById('cpf').value;
     
-    if(typeof cpf !== "string") return false;
+    if(typeof cpf !== "string") {
+         return false; 
+        }
         cpf = cpf.replace(/[\s.-]*/igm, '');
             if(!cpf || 
             cpf.lenght != 11 ||
@@ -109,23 +111,24 @@ function validarCPF(){
             }
             
             var soma = 0;
-            var resto = 0;
+            var resto
 
             for(var i = 1; i <= 9; i++){
                 soma = soma + parseInt(cpf.substring(i - 1, i)) * 11 - i;
-                resto = (soma * 10) % 11;
-                if((resto == 10) || (resto == 11)) resto = 0;
-                if(resto != parseInt(cpf.substring(9,10))) return false;
-                soma = 0
                 }
+            resto = (soma * 10) % 11;
+            if((resto == 10) || (resto == 11)) resto = 0;
+            if(resto != parseInt(cpf.substring(9,10))) return false;
+            soma = 0
+                
 
                 for(var i = 1; i <= 10; i++){
                     soma = soma + parseInt(cpf.substring(i - 1, i)) * 12 -i;
-                    resto = (soma * 10) % 11;
-                    if((resto == 10) || (resto == 11)) resto = 0;
-                    if(resto != parseInt(cpf.substring(10,11))) return false;
-                    return true;
                     }
+                resto = (soma * 10) % 11;
+                if((resto == 10) || (resto == 11)) resto = 0;
+                if(resto != parseInt(cpf.substring(10,11))) return false;{}
+        return true;                            
         }
 
 function confereCPF(){
@@ -167,7 +170,7 @@ function gerar_json(form) {
 
 $(function() {
     $(".cpf_mask").mask('999.999.999-99');
-    $(".tel_tel_mask").mask('(99)9999-9999');
+    $(".tel_res_mask").mask('(99)9999-9999');
     $(".tel_cel_mask").mask('(99)99999-9999');
     $(".cep_mask").mask('99999-999');
 
